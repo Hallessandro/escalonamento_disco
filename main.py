@@ -18,20 +18,26 @@ def main():
     # Le as requisicoes de acesso
     requisicoes = map(int, sys.stdin.readlines())
 
+    # Instancia um objeto da class FCFS
     fcfs = FCFS()
+    # Executa o algoritmo de escalonamento FCFS
     deslocamento_fcfs = fcfs.execute(cilindro_inicial, requisicoes)
 
-    print("FCFS", deslocamento_fcfs)
-
+    # Instancia um objeto da class SSTF
     sstf = SSTF()
+    # Executa o algoritmo de escalonamento SSTF
     deslocamento_sstf = sstf.execute(cilindro_inicial, copy.deepcopy(requisicoes))
 
-    print("SSTF", deslocamento_sstf)
-
+    # Instancia um objeto da class Elevador
     elevador = Elevador()
+    # Executa o algoritmo de escalonamento Elevador
     deslocamento_elevador = elevador.execute(ultimo_cilindro, cilindro_inicial, requisicoes)
 
-    print("ELEVADOR", deslocamento_elevador)
+    # Formata a saida
+    saida = 'FCFS {0}\nSSTF {1}\nELEVADOR {2}'
+
+    # Exibe a saida
+    print(saida.format(deslocamento_fcfs, deslocamento_sstf, deslocamento_elevador))
 
 # Verifica se e o modulo principal e executa o codigo
 if __name__ == "__main__":
