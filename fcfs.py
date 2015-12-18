@@ -17,8 +17,11 @@ class FCFS:
         # Configura a posicao inicial do braco do disco
         posicao_atual = cilindro_inicial
 
+        # Atende as requisicoes na ordem de chegada, acumulando o numero de
+        # cilindros percorridos
         for requisicao in requisicoes:
             cilindros_percorridos += int(math.fabs(requisicao - posicao_atual))
             posicao_atual = requisicao
 
+        # Retorna o numero de cilindros percorridos
         return cilindros_percorridos

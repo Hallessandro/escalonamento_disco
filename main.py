@@ -3,6 +3,7 @@
 
 import sys
 from fcfs import *
+from sstf import *
 
 # funcao principal
 def main():
@@ -19,6 +20,11 @@ def main():
     deslocamento_fcfs = fcfs.execute(cilindro_inicial, requisicoes)
 
     print("FCFS", deslocamento_fcfs)
+
+    sstf = SSTF()
+    deslocamento_sstf = sstf.execute(cilindro_inicial, requisicoes)
+
+    print("SSTF", deslocamento_sstf)
 
 # Verifica se e o modulo principal e executa o codigo
 if __name__ == "__main__":
