@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 
 import math
-import copy
 
 class SSTF:
     """Algoritmo de escalonamento Shortest Seek Time First (SSTF)"""

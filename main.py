@@ -4,6 +4,8 @@
 import sys
 from fcfs import *
 from sstf import *
+from elevador import *
+import copy
 
 # funcao principal
 def main():
@@ -22,9 +24,14 @@ def main():
     print("FCFS", deslocamento_fcfs)
 
     sstf = SSTF()
-    deslocamento_sstf = sstf.execute(cilindro_inicial, requisicoes)
+    deslocamento_sstf = sstf.execute(cilindro_inicial, copy.deepcopy(requisicoes))
 
     print("SSTF", deslocamento_sstf)
+
+    elevador = Elevador()
+    deslocamento_elevador = elevador.execute(ultimo_cilindro, cilindro_inicial, requisicoes)
+
+    print("ELEVADOR", deslocamento_elevador)
 
 # Verifica se e o modulo principal e executa o codigo
 if __name__ == "__main__":
