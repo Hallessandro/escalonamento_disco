@@ -37,13 +37,16 @@ def main():
     # Executa o algoritmo de escalonamento Elevador
     deslocamento_elevador = elevador.execute(ultimo_cilindro, cilindro_inicial, requisicoes)
 
-    # Formata a saida
-    #saida = 'FCFS {0}\nSSTF {1}\nELEVADOR {2}'
-
     # Exibe a saida
-    print("FCFS: ", deslocamento_fcfs)
-    print("SSTF: ", deslocamento_sstf)
-    print("SSTF: ", deslocamento_elevador)
+    print("-------------------------------------")
+    print("|        Resultados obtidos         |")
+    print("-------------------------------------")
+    print("|   FCFS  |", deslocamento_fcfs, " setores percorridos|")
+    print("-------------------------------------")
+    print("|   SSTF  |", deslocamento_sstf, " setores percorridos|")
+    print("-------------------------------------")
+    print("| Elevador|", deslocamento_elevador, " setores percorridos|")
+    print("-------------------------------------")
 
 # Verifica se e o modulo principal e executa o codigo
 if __name__ == "__main__":
