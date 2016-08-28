@@ -24,13 +24,12 @@ class Elevador:
         # Obtem as requisicoes que estao abaixo do cilindro inicial
         menores = filter(lambda x: x < posicao_atual, requisicoes)
         # Coloca as requisicoes em ordem decrescente para a descida do elevador
-        menores.sort()
-        menores.reverse()
+
 
         # Obtem as requisicoes que estao acima do cilindro inicial
         maiores = filter(lambda x: x > posicao_atual, requisicoes)
-        # Coloca as requisicoes em ordem crescente para asubida do elevador
-        maiores.sort()
+        # Coloca as requisicoes em ordem crescente para a subida do elevador
+
 
         # Atende primeiro as requisicoes acima do cilindro inicial
         for requisicao in maiores:
